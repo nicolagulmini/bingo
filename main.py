@@ -99,6 +99,8 @@ def estimateExp(n, trials):
         toRet.append(exp)
     return toRet
 
-plt.plot(range(1, 1000), estimateExp(1000, 10))
-plt.show()
-        
+plt.plot(range(1, 1000), estimateExp(1000, 10), label="estimated number of extractions to win")
+plt.legend(loc="upper right")
+plt.xlabel("number of players")
+plt.ylabel("expected extractions")
+plt.savefig("fig.png")
